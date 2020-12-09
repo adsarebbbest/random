@@ -9,12 +9,14 @@ app.use(express.static('public'));
 // Setting the view engine
 app.set('view engine', 'ejs');
 
+// The main page
 app.get('/', (req, res) => {
   res.render('index');
 });
 
+// 404 error handlers
 app.get('*', (req, res) => {
-  res.render('404', {variables: req});
+  res.render('404', { variables: req });
 });
 
 app.listen(3000);
