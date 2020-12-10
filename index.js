@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 // 404 error handlers
 app.get('*', (req, res) => {
-  res.render('404', { variables: req });
+  res.render('404', { error: req });
 });
 
 app.listen(3000);
